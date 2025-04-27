@@ -1,0 +1,326 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Main-Color: #202d48;
+    --White-color: #ffffff;
+    --White-blured-color: #f3f3f3;
+    --Secound-color: #c4d0eb;
+    --third-color: #f2f6ff;
+    --fourth-color: rgba(120, 132, 158, 0.596);
+    --five-color: #9d9d9f;
+    --black-color: #000;
+}
+
+._mainContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Assets/Images/gray-fluid-background-frame.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+._mainContainer ._Container {
+    display: flex;
+    gap: 1rem;
+    background: var(--White-color);
+    width: 70%;
+    border-radius: 0.8rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+._mainContainer ._Container ._FormContainer {
+    width: 50%;
+    padding: 2rem;
+
+}
+
+._mainContainer ._Container ._image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: var(--Main-Color);
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+
+._mainContainer ._Container ._image ._Title {
+    align-self: flex-start;
+    width: 100%;
+    padding: 0px 2rem;
+}
+
+._mainContainer ._Container ._image ._Title h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: var(--White-color);
+    line-height: 2rem;
+}
+
+._mainContainer ._Container ._image ._Title p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: var(--five-color);
+    line-height: 1.3rem;
+}
+
+._mainContainer ._Container ._image ._Shapes {
+    width: 100%;
+    height: 40vh;
+    padding: 0px;
+    margin: 0px;
+    animation: rotate-all 2s 0 infinite linear alternate;
+    -webkit-animation: rotate-all 2s 0 infinite linear alternate;
+}
+
+
+._mainContainer ._Container ._image ._Shapes .div1 {
+    width: 70px;
+    height: 70px;
+    background-color: var(--five-color);
+    position: relative;
+    margin: auto;
+    animation: square-to-circle 2.5s .5s infinite cubic-bezier(1, .015, .295, 1.225) alternate-reverse;
+    -webkit-animation: square-to-circle 2.5s .5s infinite cubic-bezier(1, .015, .295, 1.225) alternate-reverse;
+}
+
+._mainContainer ._Container ._image ._Shapes .div2 {
+    width: 70px;
+    height: 70px;
+    background-color: var(--five-color);
+    position: relative;
+    margin: auto;
+    animation: square-to-circle2 2.5s .42s infinite cubic-bezier(1, .015, .295, 1.225) alternate-reverse;
+}
+
+._mainContainer ._Container ._image ._Shapes #one {
+    top: 20px;
+}
+
+._mainContainer ._Container ._image ._Shapes #two {
+    top: 20px;
+    right: 80px;
+}
+
+._mainContainer ._Container ._image ._Shapes #three {
+    top: 20px;
+}
+
+._mainContainer ._Container ._image ._Shapes #four {
+    bottom: 120px;
+    left: 80px;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: #2e3d5e;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        background: #405173;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        background: #5c6a8c;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: #9fa9bd;
+        transform: rotate(315deg);
+    }
+
+    100% {
+        border-radius: 50%;
+        background: #3f6ea5;
+        transform: rotate(404deg);
+    }
+}
+
+@keyframes square-to-circle2 {
+    0% {
+        border-radius: 0 0 0 0;
+        background: #2e3d5e;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        border-radius: 0 0 50% 0;
+        background: #405173;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        border-radius: 0 0 50% 50%;
+        background: #5c6a8c;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        border-radius: 50% 0 50% 50%;
+        background: #9fa9bd;
+        transform: rotate(315deg);
+    }
+
+    100% {
+        border-radius: 50%;
+        background: #3f6ea5;
+        transform: rotate(404deg);
+    }
+}
+
+._mainContainer ._Container ._FormContainer ._Title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: var(--Main-Color);
+    line-height: 2.5rem;
+    margin-bottom: 20px;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._field {
+    margin-bottom: 1rem;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._inputField {
+    position: relative;
+    width: 100%;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._inputField input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._inputField input:focus {
+    border-color: #4070f4;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._inputField .show-hide {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #777;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._field ._error {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #d93025;
+    align-items: center;
+}
+
+.invalid ._error {
+    display: flex;
+}
+
+.error-icon {
+    margin-right: 6px;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._button ._btn {
+    width: 100%;
+    height: 50px;
+    background-color: var(--Main-Color);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    border: 2px solid var(--Main-color);
+}
+
+._mainContainer ._Container ._Form ._button ._btn:hover {
+    border: 2px solid var(--Main-Color);
+    background: var(--White-color);
+    color: var(--black-color);
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    ._mainContainer {
+        background-position: 100%;
+    }
+
+    ._mainContainer ._Container {
+        display: flex;
+        width: 80%;
+    }
+
+    ._mainContainer ._Container ._FormContainer {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    ._mainContainer ._Container ._image {
+        display: none;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+    ._mainContainer ._Container {
+        width: 90%;
+    }
+
+    ._mainContainer ._Container ._FormContainer {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    ._mainContainer ._Container ._image ._Title h3 {
+        font-size: 1.2rem;
+    }
+
+    ._mainContainer ._Container ._image ._Title p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+}

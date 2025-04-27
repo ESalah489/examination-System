@@ -1,0 +1,850 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Main-Color: #202d48;
+    --White-color: #ffffff;
+    --Secound-color: #c4d0eb;
+    --third-color: #f2f6ff;
+    --fourth-color: rgba(120, 132, 158, 0.596);
+    --five-color: #9d9d9f;
+    --black-color: #000;
+}
+
+._Container {
+    position: relative;
+    width: 100%;
+    background-color: var(--Main-Color);
+}
+
+._SubContainer {
+    width: 100%;
+    background-color: var(--Main-Color);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: left;
+}
+
+._SubContainer ._SectionOne {
+    width: 20%;
+    background-color: var(--Main-Color);
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+}
+
+._SubContainer ._SectionOne ._Logo {
+    width: 100%;
+}
+
+._SubContainer ._SectionOne ._Logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--White-color);
+    line-height: 3rem;
+}
+
+._SubContainer ._SectionOne ._List {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    padding: 3px 15px;
+    background-color: var(--fourth-color);
+}
+
+._SubContainer ._SectionOne .clicable {
+    cursor: pointer;
+}
+
+._SubContainer ._SectionOne ._List ._Image {
+    width: 25px;
+    height: 25px;
+}
+
+._SubContainer ._SectionOne ._List ._Image img {
+    width: 25px;
+    height: 25px;
+}
+
+._SubContainer ._SectionOne ._List ._Link p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: var(--White-color);
+    line-height: 2.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+._SubContainer ._SectionTwo {
+    width: 79%;
+    min-height: 100vh;
+    background-color: var(--White-color);
+    position: relative;
+    top: 0px;
+    left: 20%;
+    margin: 1rem 0px;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+._SubContainer ._SectionTwo ._One {
+    padding: 2rem 2rem;
+}
+
+._SubContainer ._SectionTwo ._One ._Header {
+    border-bottom: 2px solid var(--five-color);
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 0.5rem;
+}
+
+._SubContainer ._SectionTwo ._One ._Header img {
+    width: 1.5rem;
+}
+
+._SubContainer ._SectionTwo ._One ._Header span {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    line-height: 2rem;
+    color: var(--five-color);
+}
+
+._SubContainer ._SectionTwo ._Two {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._MyTodo {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._MyTodo h3 {
+    color: var(--black-color);
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon button,
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks ._Delete {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background-color: var(--Main-Color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon button img {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon button span {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-transform: capitalize;
+    color: var(--White-color);
+    text-align: center;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon ._UserImage {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--five-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon ._UserImage img {
+    width: 35px;
+    height: 35px;
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form input,
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form button,
+.SaveInp {
+    background-color: var(--White-color);
+    border: 2px solid var(--five-color);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 13rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    outline: none;
+    text-align: left;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form button {
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: center;
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form button:hover {
+    background-color: var(--Main-Color);
+    border: 2px solid var(--Main-Color);
+    color: var(--White-color);
+}
+
+._SubContainer ._SectionTwo ._Two ._SearchFilteration form input:focus {
+    background-color: var(--White-color);
+    border: 2px solid var(--Secound-color);
+}
+
+/* -------------------------------------------------------------------------- */
+._SubContainer ._SectionTwo ._Three {
+    padding: 3rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._MideaContainer {
+    margin-bottom: 3rem;
+}
+
+._CoursesBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+._CoursesItem {
+    flex-basis: calc(33.33333% - 30px);
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+._CoursesItemlink {
+    display: block;
+    padding: 30px 20px;
+    background-color: var(--Main-Color);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+._CoursesItemlink:hover ._CoursesItemDate,
+._CoursesItemlink:hover ._CoursesItemTitle,
+._CoursesItemlink:hover ._CoursesItemDateBox {
+    text-decoration: none;
+    color: var(--Main-Color);
+}
+
+._CoursesItemlink:hover ._CoursesItembg {
+    transform: scale(10);
+    -webkit-transform: scale(10);
+    -moz-transform: scale(10);
+    -o-transform: scale(10);
+}
+
+._CoursesItemTitle {
+    min-height: 87px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--White-color);
+    z-index: 2;
+    position: relative;
+    text-transform: capitalize;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+._CoursesItemDateBox {
+    font-size: 1rem;
+    color: var(--five-color);
+    z-index: 2;
+    position: relative;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+._CoursesItemDate {
+    font-weight: bold;
+    color: var(--five-color);
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+._CoursesItembg {
+    height: 128px;
+    width: 128px;
+    background-color: var(--Secound-color);
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 979px) {
+    ._CoursesItem {
+        -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+    }
+
+    ._CoursesItemTitle {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    ._MideaContainer {
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    ._CoursesItem {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+
+    ._CoursesItemTitle {
+        min-height: 72px;
+        line-height: 1;
+
+        font-size: 24px;
+    }
+
+    ._CoursesItemlink {
+        padding: 22px 40px;
+    }
+
+    ._CoursesItemDateBox {
+        font-size: 16px;
+    }
+}
+
+/* ---------------------------------- pobup --------------------------------- */
+
+._ContainerPobup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.301);
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    display: none;
+    z-index: 100000;
+}
+
+._ContainerPobup ._Card {
+    width: 50%;
+    height: 55vh;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+}
+
+._ContainerPobup ._Card ._Text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+._ContainerPobup ._Card ._Text ._Information {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+._ContainerPobup ._Card ._Text ._Information p {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+._ContainerPobup ._Card ._Text ._Information p span {
+    font-size: 1rem;
+    color: var(--five-color);
+    position: relative;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+._ContainerPobup ._Card ._Text h2 {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.8em 1em 0;
+    color: inherit;
+    font-size: 1.875em;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    cursor: initial;
+}
+
+._ContainerPobup ._Card ._Text p {
+    margin: 0;
+    padding: 1em 1.6em 0.3em;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    cursor: initial;
+}
+
+/* ------------------------------ exams styling ----------------------------- */
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid var(--five-color);
+    width: 40%;
+    min-height: 15vh;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks ._Delete {
+    width: 40%;
+    align-self: flex-end;
+    color: var(--White-color);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    border: 2px solid var(--Main-Color);
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks ._Delete:hover {
+    color: var(--black-color);
+    border: 2px solid var(--Main-Color);
+    background-color: white;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam {
+    position: relative;
+    width: 100%;
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._MarkQ {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--five-color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._MarkQ img {
+    width: 25px;
+    height: 25px;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions {
+    width: 100%;
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem 0rem;
+    border: 2px solid var(--five-color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._QuestionCard {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question ._QuestionTitle {
+    width: 100%;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question ._QuestionTitle p {
+    width: 100%;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question ._Options {
+    width: 100%;
+    min-height: 40dvh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question ._Option {
+    width: 100%;
+    min-height: 6dvh;
+    border: 2px solid var(--five-Color);
+    outline: none;
+    background-color: var(--Main-Color);
+    color: var(--White-color);
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: lowercase;
+    text-align: left;
+    padding: 0rem 1rem;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Question ._Option:hover {
+    border: 2px solid var(--Main-Color);
+    outline: none;
+    background-color: var(--five-Color);
+    color: var(--black-color);
+
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider button {
+    width: 35px;
+    height: 35px;
+    background-color: var(--Main-Color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+    ._ContainerPobup ._Card {
+        width: 100%;
+    }
+
+    ._SubContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    ._SubContainer ._SectionOne {
+        display: none;
+    }
+
+    ._SubContainer ._SectionTwo {
+        width: 90%;
+        top: 0%;
+        left: 0%;
+    }
+
+    ._SubContainer ._SectionTwo ._One {
+        padding: 1.5rem 1.5rem;
+    }
+
+    ._SubContainer ._SectionTwo ._Two {
+        padding: 0rem 1.5rem;
+        gap: 15px;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._UserCreate {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+        gap: 10px;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._UserCreate ._MyTodo {
+        font-size: 1.3rem;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._UserCreate ._UserIcon {
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._SearchFilteration form input,
+    ._SubContainer ._SectionTwo ._Two ._SearchFilteration form button {
+        width: 2.5rem;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._SearchFilteration form button {
+        width: 13rem;
+    }
+
+    #ToData {
+        display: none;
+    }
+
+    ._SubContainer ._SectionTwo ._Two ._UserCreate ._Marks {
+        width: 90%;
+        align-self: center;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+    ._SubContainer ._SectionOne {
+        padding: 2rem 1rem;
+    }
+
+    ._SubContainer ._SectionOne ._Logo {
+        width: 100%;
+    }
+
+    ._SubContainer ._SectionOne ._Logo h1 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    ._SubContainer ._SectionOne ._List {
+        padding: 0rem 0.5rem;
+    }
+
+    ._SubContainer ._SectionOne ._List ._Image {
+        width: 20px;
+        height: 20px;
+    }
+
+    ._SubContainer ._SectionOne ._List ._Image img {
+        width: 20px;
+        height: 20px;
+    }
+
+    ._SubContainer ._SectionOne ._List ._Link p {
+        font-size: 1.3rem;
+    }
+}
+
+/* ----------------------------- hidden buttons ----------------------------- */
+
+.hidden {
+    display: none;
+}
