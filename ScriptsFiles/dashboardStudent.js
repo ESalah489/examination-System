@@ -9,6 +9,35 @@ let UserEmail = document.querySelector("._UserEmail");
 UserName.innerHTML = ConvertDataToJson.userName || "unknow";
 UserEmail.innerHTML = ConvertDataToJson.userEmail || "unknow";
 
+/* ----------------------- featch exams form json file ----------------------- */
+let CoursesBox = document.querySelector("._CoursesBox");
+function displayDataDinamic() {
+  fetch("Data/data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.exams);
+      let Exams = data.exams;
+      AttachSearchEvents(Exams);
+      Exams.forEach((element) => {
+        console.log(element);
+        let CoursesItem = document.createElement("div");
+        CoursesItem.classList.add("_CoursesItem");
+        CoursesItem.innerHTML = `
+           <a href="#" class="_CoursesItemlink">
+              <div class="_CoursesItembg"></div>
+                <div class="_CoursesItemTitle">${element.title}</div>
+                <div class="_CoursesItemDisc">${element.description}</div>
+                <div class="_CoursesItemDateBox">Data:<span class="_CoursesItemDate"> ${element.date} </span>
+              </div>
+            </a>`;
+        CoursesBox.appendChild(CoursesItem);
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+displayDataDinamic();
 /* ---------------------------------- Pobup --------------------------------- */
 let Target = document.querySelector("#Target");
 let pobup = document.getElementById("pobup");
@@ -24,7 +53,7 @@ pobup.addEventListener("click", function (e) {
 
 /* ----------------------- Search about value in table ---------------------- */
 let data = [];
-function AttachSearchEvents() {
+function AttachSearchEvents(datafromjson) {
   let Search = document.querySelector("#Search");
   Search.addEventListener("click", function (e) {
     e.preventDefault();
@@ -39,15 +68,24 @@ function AttachSearchEvents() {
     }).then((result) => {
       if (result.isConfirmed) {
         let resultInArray = [];
-        data.forEach(function (element, index) {
+        console.log(datafromjson);
+        datafromjson.forEach(function (element) {
           if (element.title == result.value) {
             resultInArray.push(element);
           }
         });
+        let Searchedvalue = document.createElement("div");
+        Searchedvalue.classList.add("_containerSearchedValues");
+        resultInArray.forEach(function (element) {
+          let onecard = document.createElement("div");
+          onecard.classList.add("_cardSearchedValues");
+          onecard.innerHTML = `<h1 class='_Title'>${element.title}</h1><p class='_Disc'>${element.description}</p><p class='_Date'>${element.date}</p>`;
+          Searchedvalue.appendChild(onecard);
+        });
         if (resultInArray.length !== 0) {
           Swal.fire({
             title: "Searched Data",
-            html: table.outerHTML,
+            html: Searchedvalue,
             width: "80%",
           });
         } else {
@@ -69,4 +107,3 @@ function NoData() {
     },
   });
 }
-AttachSearchEvents();

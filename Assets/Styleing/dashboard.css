@@ -326,7 +326,11 @@
 }
 
 ._CoursesItemlink {
-    display: block;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
     padding: 30px 20px;
     background-color: var(--Main-Color);
     overflow: hidden;
@@ -349,11 +353,25 @@
 }
 
 ._CoursesItemTitle {
-    min-height: 87px;
+    min-height: fit-content;
     margin: 0 0 25px;
     overflow: hidden;
     font-weight: bold;
     font-size: 1.5rem;
+    color: var(--White-color);
+    z-index: 2;
+    position: relative;
+    text-transform: capitalize;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+._CoursesItemDisc {
+    min-height: fit-content;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 0.8rem;
     color: var(--White-color);
     z-index: 2;
     position: relative;
@@ -745,6 +763,55 @@
     width: 2rem;
     height: 2rem;
 }
+
+
+/* --------------------- adding style for element in js --------------------- */
+._containerSearchedValues {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+._containerSearchedValues ._cardSearchedValues {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+._containerSearchedValues ._cardSearchedValues ._Title {
+    width: 100%;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+    color: var(--Main-Color);
+}
+
+._containerSearchedValues ._cardSearchedValues ._Disc,
+._containerSearchedValues ._cardSearchedValues ._Date {
+    width: 100%;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--five-Color);
+
+}
+
 
 @media (min-width: 0px) and (max-width: 900px) {
     ._ContainerPobup ._Card {
