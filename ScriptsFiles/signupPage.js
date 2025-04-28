@@ -106,15 +106,19 @@ btnSubmit.addEventListener("mouseover", function () {
   }
 });
 
-// btnSubmit.addEventListener("click", function (e) {
-//   /* -------------------------- get Element form dom -------------------------- */
-//   const emailValue = document.querySelector("._Email").value.trim();
-//   const passwordValue = document.querySelector("._Password").value.trim();
-//   const confiermPassValue = document
-//     .querySelector("._confiermPassword")
-//     .value.trim();
-//   console.log(emailValue);
-//   console.log(nameValue);
-//   console.log(passwordValue);
-//   console.log(confiermPassValue);
-// });
+let usersData = [];
+btnSubmit.addEventListener("click", function (e) {
+  const userdata = {
+    userName: nameValue.value.trim(),
+    userEmail: emailValue.value.trim(),
+    userPassword: passwordValue.value.trim(),
+  };
+  usersData.push(JSON.stringify(userdata));
+  localStorage.setItem("userData", usersData);
+
+  window.location.replace("../loginPage.html");
+  nameValue.value = "";
+  emailValue.value = "";
+  passwordValue.value = "";
+  confiermPassValue.value = "";
+});
