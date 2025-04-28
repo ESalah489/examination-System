@@ -15,11 +15,9 @@ function displayDataDinamic() {
   fetch("Data/data.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.exams);
       let Exams = data.exams;
       AttachSearchEvents(Exams);
       Exams.forEach((element) => {
-        console.log(element);
         let CoursesItem = document.createElement("div");
         CoursesItem.classList.add("_CoursesItem");
         CoursesItem.innerHTML = `
@@ -68,7 +66,6 @@ function AttachSearchEvents(datafromjson) {
     }).then((result) => {
       if (result.isConfirmed) {
         let resultInArray = [];
-        console.log(datafromjson);
         datafromjson.forEach(function (element) {
           if (element.title == result.value) {
             resultInArray.push(element);

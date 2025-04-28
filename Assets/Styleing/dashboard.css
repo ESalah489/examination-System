@@ -876,6 +876,25 @@
         width: 90%;
         align-self: center;
     }
+
+    ._containerSearchedValues {
+        flex-direction: column;
+        padding: 0rem;
+    }
+
+    ._containerSearchedValues ._cardSearchedValues {
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
+
+    ._containerSearchedValues ._cardSearchedValues ._Title {
+        font-size: 1rem;
+    }
+
+    ._containerSearchedValues ._cardSearchedValues ._Disc,
+    ._containerSearchedValues ._cardSearchedValues ._Date {
+        font-size: 0.9rem;
+    }
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {
