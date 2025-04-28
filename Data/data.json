@@ -1,7 +1,7 @@
 {
   "exams": [
     {
-      "id": 1,
+      "id": 0,
       "title": "Math Exam - Grade 10",
       "description": "Final term math exam covering algebra, geometry, and trigonometry.",
       "date": "2025-05-10",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 1,
       "title": "Science Exam - Grade 9",
       "description": "Final exam covering biology, chemistry, and physics.",
       "date": "2025-05-12",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "History Exam - Grade 11",
       "description": "Covers World Wars, ancient civilizations, and historical leaders.",
       "date": "2025-05-15",
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "English Exam - Grade 8",
       "description": "Covers grammar, literature, and writing skills.",
       "date": "2025-05-18",
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Computer Science Exam - Grade 12",
       "description": "Final term exam covering programming, networks, and databases.",
       "date": "2025-05-20",

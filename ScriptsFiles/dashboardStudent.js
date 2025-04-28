@@ -20,8 +20,10 @@ function displayDataDinamic() {
       Exams.forEach((element) => {
         let CoursesItem = document.createElement("div");
         CoursesItem.classList.add("_CoursesItem");
+        CoursesItem.classList.add("child-class");
+        CoursesItem.setAttribute("id", element.id);
         CoursesItem.innerHTML = `
-           <a href="#" class="_CoursesItemlink">
+           <a href="#" class="_CoursesItemlink" onclick='displayQuestions(element.id)'>
               <div class="_CoursesItembg"></div>
                 <div class="_CoursesItemTitle">${element.title}</div>
                 <div class="_CoursesItemDisc">${element.description}</div>
@@ -104,3 +106,14 @@ function NoData() {
     },
   });
 }
+
+/* ------------------------------- go to exam ------------------------------- */
+
+CoursesBox.addEventListener("click", function (e) {
+  let clickedChild = e.target.closest(".child-class");
+  if (clickedChild) {
+    let courseId = clickedChild.getAttribute("id");
+    localStorage.setItem("SelectedExamId", courseId);
+    window.location.replace(`/exam.html`);
+  }
+});
