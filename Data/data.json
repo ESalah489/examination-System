@@ -1,0 +1,219 @@
+{
+  "exams": [
+    {
+      "title": "Math Exam - Grade 10",
+      "description": "Final term math exam covering algebra, geometry, and trigonometry.",
+      "date": "2025-05-10",
+      "questions": [
+        {
+          "questionText": "Solve for x: 3x - 7 = 11.",
+          "answers": ["6", "5", "4", "3"],
+          "correctAnswer": "6"
+        },
+        {
+          "questionText": "What is the derivative of x²?",
+          "answers": ["2x", "x", "x²", "2"],
+          "correctAnswer": "2x"
+        },
+        {
+          "questionText": "Find the area of a triangle with base 10 cm and height 5 cm.",
+          "answers": ["25 cm²", "50 cm²", "30 cm²", "15 cm²"],
+          "correctAnswer": "25 cm²"
+        },
+        {
+          "questionText": "Simplify: (2x + 3)(x - 5)",
+          "answers": [
+            "2x² - 7x - 15",
+            "2x² - 10x + 15",
+            "2x² + 3x - 15",
+            "2x² - 7x + 15"
+          ],
+          "correctAnswer": "2x² - 7x - 15"
+        },
+        {
+          "questionText": "What is sin(90°)?",
+          "answers": ["1", "0", "-1", "0.5"],
+          "correctAnswer": "1"
+        },
+        {
+          "questionText": "The value of π is approximately:",
+          "answers": ["3.14", "3.41", "2.17", "3.00"],
+          "correctAnswer": "3.14"
+        }
+      ]
+    },
+    {
+      "title": "Science Exam - Grade 9",
+      "description": "Final exam covering biology, chemistry, and physics.",
+      "date": "2025-05-12",
+      "questions": [
+        {
+          "questionText": "Which gas do plants absorb from the atmosphere?",
+          "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+          "correctAnswer": "Carbon dioxide"
+        },
+        {
+          "questionText": "What is the basic unit of life?",
+          "answers": ["Cell", "Tissue", "Organ", "Molecule"],
+          "correctAnswer": "Cell"
+        },
+        {
+          "questionText": "Which planet is known as the Red Planet?",
+          "answers": ["Mars", "Venus", "Jupiter", "Mercury"],
+          "correctAnswer": "Mars"
+        },
+        {
+          "questionText": "What is H2O commonly known as?",
+          "answers": ["Water", "Oxygen", "Hydrogen", "Salt"],
+          "correctAnswer": "Water"
+        },
+        {
+          "questionText": "What part of the cell contains genetic material?",
+          "answers": ["Nucleus", "Cytoplasm", "Cell membrane", "Mitochondria"],
+          "correctAnswer": "Nucleus"
+        },
+        {
+          "questionText": "The force that pulls objects towards Earth is called:",
+          "answers": ["Gravity", "Magnetism", "Friction", "Tension"],
+          "correctAnswer": "Gravity"
+        }
+      ]
+    },
+    {
+      "title": "History Exam - Grade 11",
+      "description": "Covers World Wars, ancient civilizations, and historical leaders.",
+      "date": "2025-05-15",
+      "questions": [
+        {
+          "questionText": "Who was the first president of the United States?",
+          "answers": [
+            "George Washington",
+            "Abraham Lincoln",
+            "Thomas Jefferson",
+            "John Adams"
+          ],
+          "correctAnswer": "George Washington"
+        },
+        {
+          "questionText": "When did World War I start?",
+          "answers": ["1914", "1918", "1939", "1945"],
+          "correctAnswer": "1914"
+        },
+        {
+          "questionText": "The Great Wall of China was built to protect against which group?",
+          "answers": ["Mongols", "Romans", "Vikings", "Persians"],
+          "correctAnswer": "Mongols"
+        },
+        {
+          "questionText": "Who was the British Prime Minister during World War II?",
+          "answers": [
+            "Winston Churchill",
+            "Neville Chamberlain",
+            "Margaret Thatcher",
+            "Tony Blair"
+          ],
+          "correctAnswer": "Winston Churchill"
+        },
+        {
+          "questionText": "What year did the Berlin Wall fall?",
+          "answers": ["1989", "1979", "1999", "1969"],
+          "correctAnswer": "1989"
+        },
+        {
+          "questionText": "Which ancient civilization built the pyramids?",
+          "answers": ["Egyptians", "Romans", "Greeks", "Aztecs"],
+          "correctAnswer": "Egyptians"
+        }
+      ]
+    },
+    {
+      "title": "English Exam - Grade 8",
+      "description": "Covers grammar, literature, and writing skills.",
+      "date": "2025-05-18",
+      "questions": [
+        {
+          "questionText": "Choose the correct synonym for 'Happy'.",
+          "answers": ["Joyful", "Sad", "Angry", "Tired"],
+          "correctAnswer": "Joyful"
+        },
+        {
+          "questionText": "Which of these is a noun?",
+          "answers": ["City", "Run", "Quickly", "Blue"],
+          "correctAnswer": "City"
+        },
+        {
+          "questionText": "What is the past tense of 'Go'?",
+          "answers": ["Went", "Goes", "Gone", "Going"],
+          "correctAnswer": "Went"
+        },
+        {
+          "questionText": "Identify the adjective: 'The fast car zoomed by.'",
+          "answers": ["Fast", "Car", "Zoomed", "By"],
+          "correctAnswer": "Fast"
+        },
+        {
+          "questionText": "Which word is a preposition?",
+          "answers": ["Under", "Jump", "Blue", "Loud"],
+          "correctAnswer": "Under"
+        },
+        {
+          "questionText": "Who wrote 'Romeo and Juliet'?",
+          "answers": [
+            "William Shakespeare",
+            "Mark Twain",
+            "Charles Dickens",
+            "Jane Austen"
+          ],
+          "correctAnswer": "William Shakespeare"
+        }
+      ]
+    },
+    {
+      "title": "Computer Science Exam - Grade 12",
+      "description": "Final term exam covering programming, networks, and databases.",
+      "date": "2025-05-20",
+      "questions": [
+        {
+          "questionText": "Which of these is a programming language?",
+          "answers": ["Python", "HTML", "HTTP", "DNS"],
+          "correctAnswer": "Python"
+        },
+        {
+          "questionText": "What does 'HTML' stand for?",
+          "answers": [
+            "HyperText Markup Language",
+            "HighText Machine Language",
+            "HyperText Managing Links",
+            "Hyper Technical Machine Language"
+          ],
+          "correctAnswer": "HyperText Markup Language"
+        },
+        {
+          "questionText": "Which device connects a network to the Internet?",
+          "answers": ["Router", "Printer", "Monitor", "Keyboard"],
+          "correctAnswer": "Router"
+        },
+        {
+          "questionText": "Which one is a type of database?",
+          "answers": ["SQL", "HTTP", "CSS", "PHP"],
+          "correctAnswer": "SQL"
+        },
+        {
+          "questionText": "What does CPU stand for?",
+          "answers": [
+            "Central Processing Unit",
+            "Central Programming Unit",
+            "Computer Personal Unit",
+            "Central Process Utility"
+          ],
+          "correctAnswer": "Central Processing Unit"
+        },
+        {
+          "questionText": "Which of the following is used to style web pages?",
+          "answers": ["CSS", "JavaScript", "SQL", "Python"],
+          "correctAnswer": "CSS"
+        }
+      ]
+    }
+  ]
+}

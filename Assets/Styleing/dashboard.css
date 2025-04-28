@@ -499,13 +499,14 @@
 
 ._ContainerPobup ._Card ._Text ._Information p {
     width: 100%;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 1rem;
     margin: 0px;
-    text-transform: capitalize;
 }
 
-._ContainerPobup ._Card ._Text ._Information p span {
+._ContainerPobup ._Card ._Text ._Information p ._TitleSpan {
     font-size: 1rem;
     color: var(--five-color);
     position: relative;

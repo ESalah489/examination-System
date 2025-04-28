@@ -1,3 +1,14 @@
+/* ---------------------------- display userData ---------------------------- */
+/* ---------------------------- get data form local storage ---------------------------- */
+
+const getDataFeomLocalStorage = localStorage.getItem("userData") || "{}";
+const ConvertDataToJson = JSON.parse(getDataFeomLocalStorage);
+let UserName = document.querySelector("._UserName");
+let UserEmail = document.querySelector("._UserEmail");
+
+UserName.innerHTML = ConvertDataToJson.userName || "unknow";
+UserEmail.innerHTML = ConvertDataToJson.userEmail || "unknow";
+
 /* ---------------------------------- Pobup --------------------------------- */
 let Target = document.querySelector("#Target");
 let pobup = document.getElementById("pobup");
