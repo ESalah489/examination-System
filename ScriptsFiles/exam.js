@@ -23,12 +23,15 @@ displayQuestions(Number(SelectedExamId));
 
 let QuestionInOnePage = 1;
 let CurrentPage = 0;
+let currentIndexFlag = 0;
+
 function RenderQuestions() {
   contentContainer.innerHTML = "";
   let Start = CurrentPage * QuestionInOnePage;
   let End = Start + QuestionInOnePage;
   let PageItems = currentExamQuestions.slice(Start, End);
   PageItems.forEach(function (element) {
+    currentIndexFlag = element.qid;
     let oneQuestion = document.createElement("div");
     oneQuestion.classList.add("_Question");
     oneQuestion.innerHTML = `  
@@ -37,7 +40,6 @@ function RenderQuestions() {
                        ${element.questionText}
                       </p>
                     </div>
-                    
                     <form class="_Options">
                       <div class="_Option"><input type="radio" name="anser"><span>${element.answers[0]}</span></div>
                       <div class="_Option"><input type="radio" name="anser"><span>${element.answers[1]}</span></div>
@@ -70,29 +72,39 @@ Next.addEventListener("click", function () {
   NextPage();
 });
 
-/* ----------- not completed that will be handled when featch data ---------- */
-const saveValue = document.querySelector("._MarkQ");
-const MarkValue = document.querySelector("._Marks");
-saveValue.addEventListener("click", function (event) {
-  event.preventDefault();
-  MarkValue.style.cssText = " display:flex;transition: all 0.2s linear;";
-});
 /* ---------------------------------- flag ---------------------------------- */
 let MarkQ = document.querySelector("._MarkQ");
 let Flags = document.querySelector("._MarkAll");
 let MarksInResponsive = document.querySelector("._MarksInResponsive");
-
-function createMark(container) {
+let indexsinflag = [];
+function createMark(container, currentIndexFlag) {
   let OneFlag = document.createElement("div");
   OneFlag.classList.add("_OneQ");
-  OneFlag.innerHTML = `<p class="_QNumber">Lorem</p><i class="bx bx-trash error-icon icon-delete"></i>`;
+  indexsinflag.push(currentIndexFlag);
+  OneFlag.innerHTML = `<p class="_QNumber">question num: ${currentIndexFlag}</p><i class="bx bx-trash error-icon icon-delete"></i>`;
   container.appendChild(OneFlag);
+  DeleteFlag();
 }
 
 MarkQ.addEventListener("click", function () {
   if (window.innerWidth < 900) {
-    createMark(MarksInResponsive);
+    createMark(MarksInResponsive, currentIndexFlag);
   } else {
-    createMark(Flags);
+    if (indexsinflag.includes(currentIndexFlag)) {
+      DeleteFlag();
+      console.log(1);
+    } else {
+      createMark(Flags, currentIndexFlag);
+    }
   }
 });
+
+/* ----------------------------- delete on flag ----------------------------- */
+function DeleteFlag() {
+  let deleteIcons = document.querySelectorAll(".icon-delete");
+  deleteIcons.forEach(function (icon) {
+    icon.onclick = function () {
+      this.parentElement.remove();
+    };
+  });
+}

@@ -7,21 +7,25 @@
       "date": "2025-05-10",
       "questions": [
         {
+          "qid": 1,
           "questionText": "Solve for x: 3x - 7 = 11.",
           "answers": ["6", "5", "4", "3"],
           "correctAnswer": "6"
         },
         {
+          "qid": 2,
           "questionText": "What is the derivative of x²?",
           "answers": ["2x", "x", "x²", "2"],
           "correctAnswer": "2x"
         },
         {
+          "qid": 3,
           "questionText": "Find the area of a triangle with base 10 cm and height 5 cm.",
           "answers": ["25 cm²", "50 cm²", "30 cm²", "15 cm²"],
           "correctAnswer": "25 cm²"
         },
         {
+          "qid": 4,
           "questionText": "Simplify: (2x + 3)(x - 5)",
           "answers": [
             "2x² - 7x - 15",
@@ -32,11 +36,13 @@
           "correctAnswer": "2x² - 7x - 15"
         },
         {
+          "qid": 5,
           "questionText": "What is sin(90°)?",
           "answers": ["1", "0", "-1", "0.5"],
           "correctAnswer": "1"
         },
         {
+          "qid": 6,
           "questionText": "The value of π is approximately:",
           "answers": ["3.14", "3.41", "2.17", "3.00"],
           "correctAnswer": "3.14"
@@ -50,31 +56,37 @@
       "date": "2025-05-12",
       "questions": [
         {
+          "qid": 1,
           "questionText": "Which gas do plants absorb from the atmosphere?",
           "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
           "correctAnswer": "Carbon dioxide"
         },
         {
+          "qid": 2,
           "questionText": "What is the basic unit of life?",
           "answers": ["Cell", "Tissue", "Organ", "Molecule"],
           "correctAnswer": "Cell"
         },
         {
+          "qid": 3,
           "questionText": "Which planet is known as the Red Planet?",
           "answers": ["Mars", "Venus", "Jupiter", "Mercury"],
           "correctAnswer": "Mars"
         },
         {
+          "qid": 4,
           "questionText": "What is H2O commonly known as?",
           "answers": ["Water", "Oxygen", "Hydrogen", "Salt"],
           "correctAnswer": "Water"
         },
         {
+          "qid": 5,
           "questionText": "What part of the cell contains genetic material?",
           "answers": ["Nucleus", "Cytoplasm", "Cell membrane", "Mitochondria"],
           "correctAnswer": "Nucleus"
         },
         {
+          "qid": 6,
           "questionText": "The force that pulls objects towards Earth is called:",
           "answers": ["Gravity", "Magnetism", "Friction", "Tension"],
           "correctAnswer": "Gravity"
@@ -88,6 +100,7 @@
       "date": "2025-05-15",
       "questions": [
         {
+          "qid": 1,
           "questionText": "Who was the first president of the United States?",
           "answers": [
             "George Washington",
@@ -98,16 +111,19 @@
           "correctAnswer": "George Washington"
         },
         {
+          "qid": 2,
           "questionText": "When did World War I start?",
           "answers": ["1914", "1918", "1939", "1945"],
           "correctAnswer": "1914"
         },
         {
+          "qid": 3,
           "questionText": "The Great Wall of China was built to protect against which group?",
           "answers": ["Mongols", "Romans", "Vikings", "Persians"],
           "correctAnswer": "Mongols"
         },
         {
+          "qid": 4,
           "questionText": "Who was the British Prime Minister during World War II?",
           "answers": [
             "Winston Churchill",
@@ -118,11 +134,13 @@
           "correctAnswer": "Winston Churchill"
         },
         {
+          "qid": 5,
           "questionText": "What year did the Berlin Wall fall?",
           "answers": ["1989", "1979", "1999", "1969"],
           "correctAnswer": "1989"
         },
         {
+          "qid": 6,
           "questionText": "Which ancient civilization built the pyramids?",
           "answers": ["Egyptians", "Romans", "Greeks", "Aztecs"],
           "correctAnswer": "Egyptians"
@@ -136,31 +154,37 @@
       "date": "2025-05-18",
       "questions": [
         {
+          "qid": 1,
           "questionText": "Choose the correct synonym for 'Happy'.",
           "answers": ["Joyful", "Sad", "Angry", "Tired"],
           "correctAnswer": "Joyful"
         },
         {
+          "qid": 2,
           "questionText": "Which of these is a noun?",
           "answers": ["City", "Run", "Quickly", "Blue"],
           "correctAnswer": "City"
         },
         {
+          "qid": 3,
           "questionText": "What is the past tense of 'Go'?",
           "answers": ["Went", "Goes", "Gone", "Going"],
           "correctAnswer": "Went"
         },
         {
+          "qid": 4,
           "questionText": "Identify the adjective: 'The fast car zoomed by.'",
           "answers": ["Fast", "Car", "Zoomed", "By"],
           "correctAnswer": "Fast"
         },
         {
+          "qid": 5,
           "questionText": "Which word is a preposition?",
           "answers": ["Under", "Jump", "Blue", "Loud"],
           "correctAnswer": "Under"
         },
         {
+          "qid": 6,
           "questionText": "Who wrote 'Romeo and Juliet'?",
           "answers": [
             "William Shakespeare",
@@ -179,11 +203,13 @@
       "date": "2025-05-20",
       "questions": [
         {
+          "qid": 1,
           "questionText": "Which of these is a programming language?",
           "answers": ["Python", "HTML", "HTTP", "DNS"],
           "correctAnswer": "Python"
         },
         {
+          "qid": 2,
           "questionText": "What does 'HTML' stand for?",
           "answers": [
             "HyperText Markup Language",
@@ -194,16 +220,19 @@
           "correctAnswer": "HyperText Markup Language"
         },
         {
+          "qid": 3,
           "questionText": "Which device connects a network to the Internet?",
           "answers": ["Router", "Printer", "Monitor", "Keyboard"],
           "correctAnswer": "Router"
         },
         {
+          "qid": 4,
           "questionText": "Which one is a type of database?",
           "answers": ["SQL", "HTTP", "CSS", "PHP"],
           "correctAnswer": "SQL"
         },
         {
+          "qid": 5,
           "questionText": "What does CPU stand for?",
           "answers": [
             "Central Processing Unit",
@@ -214,6 +243,7 @@
           "correctAnswer": "Central Processing Unit"
         },
         {
+          "qid": 6,
           "questionText": "Which of the following is used to style web pages?",
           "answers": ["CSS", "JavaScript", "SQL", "Python"],
           "correctAnswer": "CSS"

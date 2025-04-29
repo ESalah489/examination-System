@@ -650,6 +650,7 @@
     -moz-border-radius: 0.4rem;
     -ms-border-radius: 0.4rem;
     -o-border-radius: 0.4rem;
+    z-index: 100000;
 }
 
 ._SubContainer ._SectionTwo ._Two ._UserCreate ._MarksInResponsive {
