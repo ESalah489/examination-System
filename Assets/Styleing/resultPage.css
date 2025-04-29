@@ -102,6 +102,9 @@
     color: var(--five-color);
     line-height: 1.3rem;
 }
+._mainContainer ._Container ._image ._Title p span {
+    font-weight: bold;
+}
 
 ._mainContainer ._Container ._image ._Shapes {
     width: 100%;

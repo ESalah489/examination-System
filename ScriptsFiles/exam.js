@@ -109,7 +109,31 @@ function DeleteFlag() {
   });
 }
 
-// /* ---------------- when user click on input make raido work ---------------- */
+/* ------------------------------ counter time ------------------------------ */
+
+let duration = 2 * 10;
+let countDownDate = new Date().getTime() + duration * 1000;
+let times = setInterval(function () {
+  let now = new Date().getTime();
+
+  let distance = countDownDate - now;
+
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById(
+    "Timer"
+  ).innerHTML = `<p>${minutes}</p><span>:</span><p>${seconds}</p>`;
+  localStorage.removeItem("endedDate", "you are flunked");
+
+  if (distance < 0) {
+    clearInterval(times);
+    document.getElementById("Timer").innerHTML = `<p>EXPIRED</p>`;
+    localStorage.setItem("endedDate", "you are flunked");
+  }
+}, 1000);
+
+// /* ---------------- when user click on input make raido work and store answers ---------------- */
 // function ClickOption() {
 //   let options = document.querySelectorAll(".options");
 //   options.forEach(function (option) {
@@ -118,5 +142,16 @@ function DeleteFlag() {
 //       console.log(1);
 //     };
 //   });
+
+//   console.log(options);
 // }
 // ClickOption();
+
+let finshExam = document.getElementById("finshExam");
+
+finshExam.addEventListener("click", function () {
+  if (localStorage.getItem("endedDate") === null) {
+    clearInterval(times);
+    window.location.replace("/resultPage.html");
+  }
+});

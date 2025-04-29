@@ -228,6 +228,31 @@
     height: 35px;
 }
 
+/* ---------------------------------- timer --------------------------------- */
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Timer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1rem;
+    width: 20%;
+    height: 10vh;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Timer p {
+    font-size: 2rem;
+    color: var(--Main-Color);
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._Timer span {
+    font-size: 1.5rem;
+    color: var(--five-color);
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 ._SubContainer ._SectionTwo ._Two ._SearchFilteration {
     width: 100%;
     display: flex;
@@ -771,6 +796,9 @@
     gap: 30px;
 }
 
+
+
+
 ._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider button {
     width: 35px;
     height: 35px;
@@ -783,6 +811,25 @@
     -moz-border-radius: 0.4rem;
     -ms-border-radius: 0.4rem;
     -o-border-radius: 0.4rem;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider ._button {
+    align-self: flex-end;
+    width: 60px;
+    height: 35px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--White-color);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider ._button:hover {
+    color: var(--Main-Color);
+    background: none;
+    border: 1px solid var(--Main-Color);
 }
 
 ._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions ._Slider button img {
