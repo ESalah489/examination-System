@@ -37,7 +37,7 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -566,8 +566,7 @@
 ._SubContainer ._SectionOne ._Marks {
     position: absolute;
     bottom: 0.7rem;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    left: 5%;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -581,10 +580,7 @@
     -ms-border-radius: 0.4rem;
     -o-border-radius: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    -webkit-transform: translate(-50%, 0%);
-    -moz-transform: translate(-50%, 0%);
-    -ms-transform: translate(-50%, 0%);
-    -o-transform: translate(-50%, 0%);
+
     height: 60vh;
 }
 

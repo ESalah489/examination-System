@@ -79,9 +79,14 @@ btnSubmit.addEventListener("mouseover", function () {
 });
 
 btnSubmit.addEventListener("click", function (e) {
-
-
   window.location.replace("../dashboardStudent.html");
   emailValue.value = "";
   passwordValue.value = "";
 });
+
+/* --------------------------------- loader --------------------------------- */
+
+let loader = document.querySelector("._loader");
+setTimeout(() => {
+  loader.style.cssText = "display:none";
+}, 2000);

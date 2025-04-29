@@ -17,8 +17,14 @@ function displayDataDinamic() {
     .then((data) => {
       let Exams = data.exams;
       AttachSearchEvents(Exams);
-      Exams.forEach((element) => {
+      Exams.forEach((element, index) => {
         let CoursesItem = document.createElement("div");
+        /* ------------------------------ for animation ----------------------------- */
+        CoursesItem.setAttribute("data-aos", "zoom-in");
+        CoursesItem.setAttribute("data-aos-delay", `${index * 50}`);
+        CoursesItem.setAttribute("data-aos-duration", "1000");
+        CoursesItem.setAttribute("data-aos-easing", "ease-in-out");
+        /* -------------------------------------------------------------------------- */
         CoursesItem.classList.add("_CoursesItem");
         CoursesItem.classList.add("child-class");
         CoursesItem.setAttribute("id", element.id);

@@ -9,10 +9,25 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="_mainContainer">
-      <div class="_Container">
+      <div class="_loader">
+        <div class="_loaderIcon">
+          <img
+            src="Assets/Images/Dual Ball@1x-1.0s-200px-200px.svg"
+            alt="loader icon"
+          />
+        </div>
+      </div>
+      <div
+        class="_Container"
+        data-aos="zoom-in"
+        data-aos-delay="2000"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+      >
         <div class="_image">
           <div class="_Title">
             <h3>Welcome! Let's Get You Set Up</h3>
@@ -93,10 +108,17 @@
             <div class="_inputField _button">
               <input type="submit" value="SignUp Now" class="_btn" id="btn" />
             </div>
+            <div class="_Link">
+              <a href="#" id="_GoToLogin">have An Account?</a>
+            </div>
           </form>
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="ScriptsFiles/signupPage.js"></script>
   </body>
 </html>

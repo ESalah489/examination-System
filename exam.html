@@ -8,16 +8,30 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
     <title>Exam</title>
   </head>
   <body>
     <div class="_Container">
       <div class="_SubContainer">
         <div class="_SectionOne">
-          <div class="_Logo">
+          <div
+            class="_Logo"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <h1>Examination</h1>
           </div>
-          <div class="_List">
+          <div
+            class="_List"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <span class="_Image"
               ><img src="Assets/Images/icons8-apps-48.png" alt="icon apps"
             /></span>
@@ -25,7 +39,13 @@
               <p>Dashboard</p>
             </span>
           </div>
-          <div class="_Marks _MarkAll">
+          <div
+            class="_Marks _MarkAll"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div class="_Title"><p>Flags</p></div>
           </div>
         </div>
@@ -50,7 +70,13 @@
               <div class="_MyTodo">
                 <h3>Eaxm</h3>
               </div>
-              <div class="_MarksInResponsive _MarkAll">
+              <div
+                class="_MarksInResponsive _MarkAll"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+              >
                 <div class="_Title"><p>Flags</p></div>
               </div>
             </div>
@@ -58,13 +84,25 @@
           <div class="_Three">
             <div class="_Midea">
               <div class="_CardExam">
-                <div class="_MarkQ">
+                <div
+                  class="_MarkQ"
+                  data-aos="zoom-in"
+                  data-aos-delay="150"
+                  data-aos-duration="2000"
+                  data-aos-easing="ease-in-out"
+                >
                   <img
                     src="/Assets/Images/save-icon-silhouette-svgrepo-com.svg"
                     alt="save-icon"
                   />
                 </div>
-                <div class="_Questions">
+                <div
+                  class="_Questions"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                >
                   <div class="_QuestionCard"></div>
                   <div class="_Slider">
                     <button id="_Prev">
@@ -87,6 +125,10 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="ScriptsFiles/exam.js"></script>
   </body>
 </html>

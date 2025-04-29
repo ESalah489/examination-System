@@ -122,3 +122,18 @@ btnSubmit.addEventListener("click", function (e) {
   passwordValue.value = "";
   confiermPassValue.value = "";
 });
+
+/* --------------------------------- loader --------------------------------- */
+
+let loader = document.querySelector("._loader");
+setTimeout(() => {
+  loader.style.cssText = "display:none";
+}, 2000);
+
+/* ------------------------- Go To Login Using Link ------------------------- */
+
+let link = document.querySelector("#_GoToLogin");
+
+link.addEventListener("click", function () {
+  window.location.replace("../loginPage.html");
+});
