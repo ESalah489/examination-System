@@ -48,6 +48,24 @@ function RenderQuestions() {
                      </form>
                   `;
     contentContainer.appendChild(oneQuestion);
+
+    let savedAnswers = localStorage.getItem("studentResult");
+    if (savedAnswers) {
+      let savedArray = savedAnswers.split(",");
+      let selectedAnswer = savedArray[element.qid];
+      if (selectedAnswer) {
+        let options = oneQuestion.querySelectorAll("._Option");
+        options.forEach((option) => {
+          if (
+            option.querySelector("span").textContent.trim() ===
+            selectedAnswer.trim()
+          ) {
+            option.querySelector('input[type="radio"]').checked = true;
+          }
+        });
+      }
+    }
+
     ClickOption();
   });
 }
@@ -93,7 +111,6 @@ MarkQ.addEventListener("click", function () {
   } else {
     if (indexsinflag.includes(currentIndexFlag)) {
       DeleteFlag();
-      console.log(1);
     } else {
       createMark(Flags, currentIndexFlag);
     }
@@ -109,6 +126,15 @@ function DeleteFlag() {
     };
   });
 }
+
+// /* ----------------------------- when ckick on any falge return it to question  ----------------------------- */
+// function ReturnToQuestion() {
+//   let question = document.querySelectorAll("._QNumber");
+//   question.forEach(function (ques) {
+//     question.onclick = function () {
+//     };
+//   });
+// }
 
 /* ------------------------------ counter time ------------------------------ */
 
@@ -132,6 +158,7 @@ let times = setInterval(function () {
     document.getElementById("Timer").innerHTML = `<p>EXPIRED</p>`;
     localStorage.setItem("endedDate", "you are flunked");
   }
+  dateIsEnded();
 }, 1000);
 
 // /* ---------------- when user click on input make raido work and store answers ---------------- */
@@ -149,6 +176,7 @@ function ClickOption() {
       localStorage.setItem("studentResult", studentAnswers);
       console.log(localStorage.getItem("studentResult"));
       res = localStorage.getItem("studentResult").split(",");
+      console.log(WhenNoAnswerYet);
       if (res.length !== 6) {
         finshExam.disabled = true;
       } else {
@@ -158,6 +186,13 @@ function ClickOption() {
   });
 }
 
+/* ------ handle if user chick on finsh and he not select ant question ------ */
+let WhenNoAnswerYet = localStorage.getItem("studentResult");
+console.log(WhenNoAnswerYet);
+if (WhenNoAnswerYet === null) {
+  finshExam.disabled = true;
+}
+/* ------------------ handle if data not ended go to result page ----------------- */
 finshExam.addEventListener("click", function () {
   if (localStorage.getItem("endedDate") === null) {
     clearInterval(times);
@@ -165,4 +200,9 @@ finshExam.addEventListener("click", function () {
   }
 });
 
-console.dir(finshExam);
+/* ------------------ handle if data ended go to result page ----------------- */
+function dateIsEnded() {
+  if (localStorage.getItem("endedDate") !== null) {
+    window.location.replace("/resultPage.html");
+  }
+}

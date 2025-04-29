@@ -119,6 +119,8 @@ CoursesBox.addEventListener("click", function (e) {
     let courseId = clickedChild.getAttribute("id");
     localStorage.setItem("SelectedExamId", courseId);
     localStorage.removeItem("studentResult");
+    localStorage.removeItem("endedDate");
+
     window.location.replace(`/exam.html`);
   }
 });

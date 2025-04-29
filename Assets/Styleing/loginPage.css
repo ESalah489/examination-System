@@ -25,6 +25,7 @@
     background-size: cover;
     background-position: bottom;
 }
+
 /* ------------------------------- loader icon ------------------------------ */
 ._mainContainer ._loader {
     display: flex;
@@ -269,6 +270,23 @@
 
 ._mainContainer ._Container ._FormContainer ._Form ._inputField input:focus {
     border-color: #4070f4;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._Link {
+    text-align: right;
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+._mainContainer ._Container ._FormContainer ._Form ._Link a {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: var(--Main-Color);
+    text-decoration: none;
+    line-height: 1.3rem;
 }
 
 ._mainContainer ._Container ._FormContainer ._Form ._inputField .show-hide {
