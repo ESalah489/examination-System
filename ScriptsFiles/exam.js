@@ -48,6 +48,7 @@ function RenderQuestions() {
                      </form>
                   `;
     contentContainer.appendChild(oneQuestion);
+    ClickOption();
   });
 }
 function NextPage() {
@@ -111,7 +112,7 @@ function DeleteFlag() {
 
 /* ------------------------------ counter time ------------------------------ */
 
-let duration = 2 * 10;
+let duration = 2 * 60;
 let countDownDate = new Date().getTime() + duration * 1000;
 let times = setInterval(function () {
   let now = new Date().getTime();
@@ -134,20 +135,28 @@ let times = setInterval(function () {
 }, 1000);
 
 // /* ---------------- when user click on input make raido work and store answers ---------------- */
-// function ClickOption() {
-//   let options = document.querySelectorAll(".options");
-//   options.forEach(function (option) {
-//     option.onclick = function () {
-//       this.checked = true;
-//       console.log(1);
-//     };
-//   });
-
-//   console.log(options);
-// }
-// ClickOption();
-
 let finshExam = document.getElementById("finshExam");
+let studentAnswers = [];
+let res;
+function ClickOption() {
+  let options = document.querySelectorAll("._Option");
+  options.forEach(function (option) {
+    option.onclick = function () {
+      const radio = option.querySelector('input[type="radio"]');
+      radio.checked = true;
+      const answerText = option.querySelector("span").textContent;
+      studentAnswers[currentIndexFlag] = answerText;
+      localStorage.setItem("studentResult", studentAnswers);
+      console.log(localStorage.getItem("studentResult"));
+      res = localStorage.getItem("studentResult").split(",");
+      if (res.length !== 6) {
+        finshExam.disabled = true;
+      } else {
+        finshExam.disabled = false;
+      }
+    };
+  });
+}
 
 finshExam.addEventListener("click", function () {
   if (localStorage.getItem("endedDate") === null) {
@@ -155,3 +164,5 @@ finshExam.addEventListener("click", function () {
     window.location.replace("/resultPage.html");
   }
 });
+
+console.dir(finshExam);

@@ -112,14 +112,13 @@ function NoData() {
     },
   });
 }
-
 /* ------------------------------- go to exam ------------------------------- */
-
 CoursesBox.addEventListener("click", function (e) {
   let clickedChild = e.target.closest(".child-class");
   if (clickedChild) {
     let courseId = clickedChild.getAttribute("id");
     localStorage.setItem("SelectedExamId", courseId);
+    localStorage.removeItem("studentResult");
     window.location.replace(`/exam.html`);
   }
 });
