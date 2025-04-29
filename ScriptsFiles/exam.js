@@ -108,3 +108,15 @@ function DeleteFlag() {
     };
   });
 }
+
+// /* ---------------- when user click on input make raido work ---------------- */
+// function ClickOption() {
+//   let options = document.querySelectorAll(".options");
+//   options.forEach(function (option) {
+//     option.onclick = function () {
+//       this.checked = true;
+//       console.log(1);
+//     };
+//   });
+// }
+// ClickOption();

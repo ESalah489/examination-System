@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Result</title>
+    <link rel="stylesheet" href="Assets/Styleing/resultPage.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="_mainContainer">
+      <div class="_loader">
+        <div class="_loaderIcon">
+          <img
+            src="Assets/Images/Dual Ball@1x-1.0s-200px-200px.svg"
+            alt="loader icon"
+          />
+        </div>
+      </div>
+      <div
+        class="_Container"
+        data-aos="zoom-in"
+        data-aos-delay="2000"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+      >
+        <div class="_image">
+          <div class="_Title">
+            <h3>Exam Results</h3>
+            <p>
+              Your final score is displayed below. Review your answers and track
+              your performance to improve in the future.
+            </p>
+            <p><strong>Score:</strong> 85 / 100</p>
+          </div>
+          <div class="_Shapes">
+            <div class="div1" id="one"></div>
+            <div class="div1" id="two"></div>
+            <div class="div2" id="three"></div>
+            <div class="div2" id="four"></div>
+          </div>
+        </div>
+        <div class="_FormContainer">
+          <!-- <div class="_Title">Sign In</div>
+          <form action="#" class="_Form">
+            <div class="_field email-field">
+              <div class="_inputField">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="_Email"
+                  required
+                />
+              </div>
+              <span class="_error _Email-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">Please enter a valid email</p>
+              </span>
+            </div>
+            <div class="_field">
+              <div class="_inputField">
+                <input
+                  type="password"
+                  placeholder="Create password"
+                  class="_Password"
+                  required
+                />
+              </div>
+              <span class="_error _Password-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">Please enter a valid password</p>
+              </span>
+            </div>
+            <div class="_field _checkBoxContainer">
+              <div class="_checkbox">
+                <input type="checkbox" class="_checkBoxField" required />
+                <span>remember me</span>
+              </div>
+            </div>
+            <div class="_inputField _button">
+              <input type="submit" value="Sign In Now" class="_btn" id="btn" />
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/ScriptsFiles/resultPage.js"></script>
+  </body>
+</html>
