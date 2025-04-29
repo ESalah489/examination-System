@@ -85,6 +85,7 @@ function checkConfirmPassword(userConfermPassword) {
 checkPassword(passwordValue);
 checkConfirmPassword(confiermPassValue);
 /* ---------------------------- validation on all inputs ---------------------------- */
+let usersData = [];
 
 function checkAllInputs() {
   if (
@@ -98,29 +99,26 @@ function checkAllInputs() {
   } else {
     btnSubmit.removeAttribute("disabled");
     btnSubmit.style.backgroundColor = "#202d48";
+    btnSubmit.addEventListener("click", function (e) {
+      const userdata = {
+        userName: nameValue.value.trim(),
+        userEmail: emailValue.value.trim(),
+        userPassword: passwordValue.value.trim(),
+      };
+      usersData.push(JSON.stringify(userdata));
+      localStorage.setItem("userData", usersData);
+      window.location.replace("../loginPage.html");
+      nameValue.value = "";
+      emailValue.value = "";
+      passwordValue.value = "";
+      confiermPassValue.value = "";
+    });
   }
 }
 btnSubmit.addEventListener("mouseover", function () {
   if (this.disabled === true) {
     this.style.cssText = "border:none;color:#fff;background-color:#202d4870;";
   }
-});
-
-let usersData = [];
-btnSubmit.addEventListener("click", function (e) {
-  const userdata = {
-    userName: nameValue.value.trim(),
-    userEmail: emailValue.value.trim(),
-    userPassword: passwordValue.value.trim(),
-  };
-  usersData.push(JSON.stringify(userdata));
-  localStorage.setItem("userData", usersData);
-
-  window.location.replace("../loginPage.html");
-  nameValue.value = "";
-  emailValue.value = "";
-  passwordValue.value = "";
-  confiermPassValue.value = "";
 });
 
 /* --------------------------------- loader --------------------------------- */

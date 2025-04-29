@@ -174,14 +174,17 @@ function ClickOption() {
       const answerText = option.querySelector("span").textContent;
       studentAnswers[currentIndexFlag] = answerText;
       localStorage.setItem("studentResult", studentAnswers);
-      console.log(localStorage.getItem("studentResult"));
       res = localStorage.getItem("studentResult").split(",");
-      console.log(WhenNoAnswerYet);
       if (res.length !== 6) {
         finshExam.disabled = true;
       } else {
         finshExam.disabled = false;
       }
+      res.forEach((ele) => {
+        if (ele == "") {
+          finshExam.disabled = true;
+        }
+      });
     };
   });
 }

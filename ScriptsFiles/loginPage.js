@@ -70,18 +70,17 @@ function checkAllInputs() {
   } else {
     btnSubmit.removeAttribute("disabled");
     btnSubmit.style.backgroundColor = "#202d48";
+    btnSubmit.addEventListener("click", function (e) {
+      window.location.replace("../dashboardStudent.html");
+      emailValue.value = "";
+      passwordValue.value = "";
+    });
   }
 }
 btnSubmit.addEventListener("mouseover", function () {
   if (this.disabled === true) {
     this.style.cssText = "border:none;color:#fff;background-color:#202d4870;";
   }
-});
-
-btnSubmit.addEventListener("click", function (e) {
-  window.location.replace("../dashboardStudent.html");
-  emailValue.value = "";
-  passwordValue.value = "";
 });
 
 /* --------------------------------- loader --------------------------------- */
@@ -91,7 +90,6 @@ setTimeout(() => {
   loader.style.cssText = "display:none";
 }, 2000);
 /* ------------------------- Go To Sign up Using Link ------------------------- */
-
 let link = document.querySelector("#_GoToLogin");
 
 link.addEventListener("click", function () {
