@@ -107,7 +107,14 @@ function createMark(container, currentIndexFlag) {
 
 MarkQ.addEventListener("click", function () {
   if (window.innerWidth < 900) {
-    createMark(MarksInResponsive, currentIndexFlag);
+    if (indexsinflag.includes(currentIndexFlag)) {
+      DeleteFlag();
+    } else {
+      let MarksInResponsive = document.querySelector("._MarksInResponsive");
+      if (MarksInResponsive) {
+        createMark(MarksInResponsive, currentIndexFlag);
+      }
+    }
   } else {
     if (indexsinflag.includes(currentIndexFlag)) {
       DeleteFlag();

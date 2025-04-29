@@ -13,7 +13,6 @@ let trueEmail = false;
 let UserEmailFromLocal = ConvertDataToJson.userEmail;
 function checkEmail(userEmail) {
   const errorMessage = document.querySelector("._Email-error");
-  console.log(errorMessage);
   userEmail.addEventListener("input", function () {
     if (userEmail.value.trim() !== UserEmailFromLocal || this.value == "") {
       errorMessage.style.display = "flex";

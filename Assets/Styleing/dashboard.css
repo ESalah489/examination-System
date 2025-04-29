@@ -1027,6 +1027,12 @@
     .icon-delete {
         color: var(--Main-Color);
     }
+
+    ._SubContainer ._SectionTwo ._Two ._UserCreate ._Timer {
+        width: 20%;
+        height: 5vh;
+    }
+
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {
