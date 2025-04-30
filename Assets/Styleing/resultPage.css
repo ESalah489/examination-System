@@ -102,8 +102,43 @@
     color: var(--five-color);
     line-height: 1.3rem;
 }
+
 ._mainContainer ._Container ._image ._Title p span {
     font-weight: bold;
+}
+
+._mainContainer ._Container ._uniqe {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+    width: fit-content;
+}
+
+._mainContainer ._Container ._uniqe ._ifStudentFailed {
+    width: 30%;
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+._mainContainer ._Container ._uniqe ._ifStudentFailed button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--five-color);
+    background: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 2px solid var(--five-color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    cursor: pointer;
+    outline: none;
 }
 
 ._mainContainer ._Container ._image ._Shapes {

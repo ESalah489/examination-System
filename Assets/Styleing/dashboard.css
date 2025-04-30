@@ -660,6 +660,7 @@
     margin-bottom: 50px;
 }
 
+/* ------------------------------- flag style ------------------------------- */
 ._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._MarkQ {
     position: absolute;
     top: 5px;
@@ -687,6 +688,46 @@
     height: 25px;
 }
 
+
+
+/* ------------------------------- timer style ------------------------------ */
+
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._NumQContainer {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--five-color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    z-index: 100000;
+}
+
+._SubContainer ._SectionTwo ._Two ._UserCreate ._MarksInResponsive {
+    display: none;
+}
+
+._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._NumQContainer ._QNumber {
+    text-align: center;
+    width: fit-content;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+    color: var(--Main-Color);
+}
+
+/* -------------------------------------------------------------------------- */
 ._SubContainer ._SectionTwo ._Three ._Midea ._CardExam ._Questions {
     width: 100%;
     min-height: 60dvh;
@@ -795,7 +836,6 @@
     justify-content: center;
     gap: 30px;
 }
-
 
 
 

@@ -1,3 +1,6 @@
+/* --------------------------- number of question --------------------------- */
+let NumQContainer = document.querySelector("._NumQContainer");
+
 /* ----------------------- get data from lacal Storage ---------------------- */
 const SelectedExamId = localStorage.getItem("SelectedExamId") || "{}";
 
@@ -24,13 +27,13 @@ displayQuestions(Number(SelectedExamId));
 let QuestionInOnePage = 1;
 let CurrentPage = 0;
 let currentIndexFlag = 0;
-
 function RenderQuestions() {
   contentContainer.innerHTML = "";
   let Start = CurrentPage * QuestionInOnePage;
   let End = Start + QuestionInOnePage;
   let PageItems = currentExamQuestions.slice(Start, End);
   PageItems.forEach(function (element) {
+    getNumberOfEachQues = element.qid;
     currentIndexFlag = element.qid;
     let oneQuestion = document.createElement("div");
     oneQuestion.classList.add("_Question");
@@ -48,7 +51,6 @@ function RenderQuestions() {
                      </form>
                   `;
     contentContainer.appendChild(oneQuestion);
-
     let savedAnswers = localStorage.getItem("studentResult");
     if (savedAnswers) {
       let savedArray = savedAnswers.split(",");
@@ -65,20 +67,34 @@ function RenderQuestions() {
         });
       }
     }
-
     ClickOption();
+    numOfEachQues(NumQContainer, currentIndexFlag);
   });
 }
+/* ----------------------- get number of each question ---------------------- */
+
+let numberOfEachQues = [];
+function numOfEachQues(container, currentIndexFlag) {
+  let OneNumberOfQues = document.createElement("span");
+  OneNumberOfQues.classList.add("_QNumber");
+  numberOfEachQues.push(currentIndexFlag);
+  console.log(numberOfEachQues);
+  OneNumberOfQues.innerHTML = `${currentIndexFlag + 1}`;
+  container.appendChild(OneNumberOfQues);
+}
+/* ----------------------- next and prev in questions ----------------------- */
 function NextPage() {
   let maxPages = Math.ceil(currentExamQuestions.length / QuestionInOnePage);
   if (CurrentPage + 1 < maxPages) {
     CurrentPage++;
+    NumQContainer.innerHTML = ``;
     RenderQuestions();
   }
 }
 function PrevPage() {
   if (CurrentPage > 0) {
     CurrentPage--;
+    NumQContainer.innerHTML = ``;
     RenderQuestions();
   }
 }
@@ -158,12 +174,12 @@ let times = setInterval(function () {
   document.getElementById(
     "Timer"
   ).innerHTML = `<p>${minutes}</p><span>:</span><p>${seconds}</p>`;
-  localStorage.removeItem("endedDate", "you are flunked");
+  localStorage.removeItem("endedDate");
 
   if (distance < 0) {
     clearInterval(times);
     document.getElementById("Timer").innerHTML = `<p>EXPIRED</p>`;
-    localStorage.setItem("endedDate", "you are flunked");
+    localStorage.setItem("endedDate", "you are failed");
   }
   dateIsEnded();
 }, 1000);
@@ -198,7 +214,6 @@ function ClickOption() {
 
 /* ------ handle if user chick on finsh and he not select ant question ------ */
 let WhenNoAnswerYet = localStorage.getItem("studentResult");
-console.log(WhenNoAnswerYet);
 if (WhenNoAnswerYet === null) {
   finshExam.disabled = true;
 }

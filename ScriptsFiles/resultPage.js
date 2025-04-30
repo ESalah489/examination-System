@@ -1,5 +1,6 @@
 /* ---------------------------- if time is endded --------------------------- */
 let result = document.querySelector("#_result");
+let ifStudentFailed = document.querySelector("._uniqe");
 let finalDegree = 0;
 let correctAnswer = [];
 
@@ -25,7 +26,17 @@ if (localStorage.getItem("endedDate") !== null) {
             finalDegree += 10;
           }
         }
-        result.innerHTML = `${finalDegree} from ${res.length * 10}`;
+        if (finalDegree <= (res.length * 10) / 2) {
+          result.innerHTML = `you are failed ,your degree is ${finalDegree} from ${
+            res.length * 10
+          }`;
+          ifStudentFailed.style.display = "block";
+          ifStudentFailed.addEventListener("click", function () {
+            window.location.replace("/dashboardStudent.html");
+          });
+        } else {
+          result.innerHTML = `${finalDegree} from ${res.length * 10}`;
+        }
       })
       .catch((error) => {
         console.log(error);
