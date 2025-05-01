@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Result</title>
+    <link rel="stylesheet" href="Assets/Styleing/emptyData.css" />
+  </head>
+  <body>
+    <div class="_mainContainer">
+      <div class="_Container">
+        <div class="_noData">
+          <div class="_image">
+            <img src="Assets/Images/No data-pana.png" alt="no data founded" />
+          </div>
+          <div class="_Btn"><button>go to home</button></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let goToHome = document.querySelector("._Btn");
+      goToHome.addEventListener("click", function () {
+        window.location.replace("/dashboardStudent.html");
+      });
+    </script>
+  </body>
+</html>

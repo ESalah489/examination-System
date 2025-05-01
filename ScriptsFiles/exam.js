@@ -17,13 +17,12 @@ function displayQuestions(id) {
       currentExamQuestions = currentExam.questions;
       RenderQuestions();
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(() => {
+      window.location.replace("/emptyData.html");
     });
 }
 
 displayQuestions(Number(SelectedExamId));
-
 let QuestionInOnePage = 1;
 let CurrentPage = 0;
 let currentIndexFlag = 0;
@@ -116,7 +115,9 @@ function createMark(container, currentIndexFlag) {
   let OneFlag = document.createElement("div");
   OneFlag.classList.add("_OneQ");
   indexsinflag.push(currentIndexFlag);
-  OneFlag.innerHTML = `<p class="_QNumber">question num: ${currentIndexFlag}</p><i class="bx bx-trash error-icon icon-delete"></i>`;
+  OneFlag.innerHTML = `<p class="_QNumber">question num: ${
+    currentIndexFlag + 1
+  }</p><i class="bx bx-trash error-icon icon-delete"></i>`;
   container.appendChild(OneFlag);
   DeleteFlag();
 }

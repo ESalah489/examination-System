@@ -1,0 +1,117 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Main-Color: #202d48;
+    --White-color: #ffffff;
+    --White-blured-color: #f3f3f3;
+    --Secound-color: #c4d0eb;
+    --third-color: #f2f6ff;
+    --fourth-color: rgba(120, 132, 158, 0.596);
+    --five-color: #9d9d9f;
+    --black-color: #000;
+}
+
+._mainContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Assets/Images/gray-fluid-background-frame.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* -------------------------------------------------------------------------- */
+._mainContainer ._Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 70vh;
+}
+
+
+._mainContainer ._Container ._noData {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+._mainContainer ._Container ._noData ._image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+._mainContainer ._Container ._noData ._image img {
+    width: 25rem;
+}
+
+._mainContainer ._Container ._noData ._Btn {
+    width: 30%;
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+._mainContainer ._Container ._noData ._Btn button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--White-color);
+    background: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 2px solid var(--Main-Color);
+    background-color: var(--Main-Color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    cursor: pointer;
+    outline: none;
+}
+
+._mainContainer ._Container ._noData ._Btn button:hover {
+    background-color: var(--White-color);
+    color: var(--Main-Color);
+
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    ._mainContainer ._Container {
+        display: flex;
+        width: 80%;
+        min-height: 60vh;
+    }
+
+    ._mainContainer ._Container ._noData {
+        justify-content: space-around;
+    }
+
+    ._mainContainer ._Container ._noData ._image img {
+        width: 20rem;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+    ._mainContainer {
+        background-position: 100%;
+    }
+
+    ._mainContainer ._Container {
+        width: 90%;
+    }
+}

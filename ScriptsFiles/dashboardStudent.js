@@ -3,6 +3,7 @@
 
 const getDataFeomLocalStorage = localStorage.getItem("userData") || "{}";
 const ConvertDataToJson = JSON.parse(getDataFeomLocalStorage);
+
 let UserName = document.querySelector("._UserName");
 let UserEmail = document.querySelector("._UserEmail");
 
@@ -120,7 +121,6 @@ CoursesBox.addEventListener("click", function (e) {
     localStorage.setItem("SelectedExamId", courseId);
     localStorage.removeItem("studentResult");
     localStorage.removeItem("endedDate");
-
     window.location.replace(`/exam.html`);
   }
 });

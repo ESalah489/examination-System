@@ -9,19 +9,19 @@
         {
           "qid": 0,
           "questionText": "Solve for x: 3x - 7 = 11.",
-          "answers": ["6", "5", "4", "3"],
+          "answers": ["5", "4", "6", "3"],
           "correctAnswer": "6"
         },
         {
           "qid": 1,
           "questionText": "What is the derivative of x²?",
-          "answers": ["2x", "x", "x²", "2"],
+          "answers": ["x", "2x", "x²", "2"],
           "correctAnswer": "2x"
         },
         {
           "qid": 2,
           "questionText": "Find the area of a triangle with base 10 cm and height 5 cm.",
-          "answers": ["25 cm²", "50 cm²", "30 cm²", "15 cm²"],
+          "answers": ["50 cm²", "30 cm²", "25 cm²", "15 cm²"],
           "correctAnswer": "25 cm²"
         },
         {
@@ -38,13 +38,13 @@
         {
           "qid": 4,
           "questionText": "What is sin(90°)?",
-          "answers": ["1", "0", "-1", "0.5"],
+          "answers": ["0", "-1", "1", "0.5"],
           "correctAnswer": "1"
         },
         {
           "qid": 5,
           "questionText": "The value of π is approximately:",
-          "answers": ["3.14", "3.41", "2.17", "3.00"],
+          "answers": ["3.41", "2.17", "3.00", "3.14"],
           "correctAnswer": "3.14"
         }
       ]
