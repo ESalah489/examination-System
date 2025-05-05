@@ -12,6 +12,7 @@
     --fourth-color: rgba(120, 132, 158, 0.596);
     --five-color: #9d9d9f;
     --black-color: #000;
+    --red-color: #ff0000;
 }
 
 ._Container {
@@ -642,10 +643,17 @@
     line-height: 1rem;
     color: var(--White-color);
     width: 80%;
+    cursor: pointer;
 }
 
 .icon-delete {
     color: var(--White-color);
+    cursor: pointer;
+
+}
+
+.icon-delete:hover {
+    color: var(--red-color);
 }
 
 ._SubContainer ._SectionTwo ._Three ._Midea ._CardExam {
