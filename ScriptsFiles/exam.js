@@ -118,7 +118,6 @@ function createMark(container, currentIndexFlag) {
   }</p><i class="bx bx-trash error-icon icon-delete"></i>`;
   container.appendChild(OneFlag);
   DeleteFlag();
-  // ReturnToQuestion(currentIndexFlag);
 }
 MarkQ.addEventListener("click", function () {
   if (window.innerWidth < 900) {
@@ -147,14 +146,7 @@ function DeleteFlag() {
     };
   });
 }
-/* ----------------------------- when ckick on any falge return it to question  -----------------------------*/
-// function ReturnToQuestion(currentIndexFlag) {
-//   let question = document.querySelectorAll("._OneQ");
-//   question.forEach(function (ques) {
-//     ques.onclick = function () {
-//     };
-//   });
-// }
+
 /* ------------------------------ counter time ------------------------------ */
 let duration = 2 * 60;
 let countDownDate = new Date().getTime() + duration * 1000;
