@@ -20,6 +20,10 @@ let correctAnswer = [];
 
 if (localStorage.getItem("endedDate") !== null) {
   result.innerHTML = localStorage.getItem("endedDate");
+  ifStudentFailed.style.display = "block";
+  ifStudentFailed.addEventListener("click", function () {
+    window.location.replace("/dashboardStudent.html");
+  });
 } else {
   const SelectedExamId = localStorage.getItem("SelectedExamId") || "{}";
   let currentExam = [];
@@ -56,7 +60,7 @@ if (localStorage.getItem("endedDate") !== null) {
         }
       })
       .catch((error) => {
-        console.log(error);
+        window.location.replace("/emptyData.html");
       });
   }
   displayQuestions(Number(SelectedExamId));

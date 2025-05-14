@@ -59,7 +59,7 @@ pobup.addEventListener("click", function (e) {
 });
 
 /* ----------------------- Search about value in table ---------------------- */
-let data = [];
+// let data = [];
 function AttachSearchEvents(datafromjson) {
   let Search = document.querySelector("#Search");
   Search.addEventListener("click", function (e) {
@@ -108,9 +108,6 @@ function NoData() {
     text: "No Data Founded",
     showConfirmButton: false,
     timer: 1500,
-    didOpen: () => {
-      document.querySelector(".swal2-container").style.zIndex = "100001";
-    },
   });
 }
 /* ------------------------------- go to exam ------------------------------- */

@@ -19,6 +19,7 @@ function displayQuestions(id) {
     });
 }
 displayQuestions(Number(SelectedExamId));
+
 let QuestionInOnePage = 1;
 let CurrentPage = 0;
 let currentIndexFlag = 0;
@@ -124,7 +125,6 @@ MarkQ.addEventListener("click", function () {
     if (indexsinflag.includes(currentIndexFlag)) {
       DeleteFlag();
     } else {
-      let MarksInResponsive = document.querySelector("._MarksInResponsive");
       if (MarksInResponsive) {
         createMark(MarksInResponsive, currentIndexFlag);
       }
@@ -148,17 +148,21 @@ function DeleteFlag() {
 }
 
 /* ------------------------------ counter time ------------------------------ */
-let duration = 2 * 60;
+let duration = 3 * 60;
 let countDownDate = new Date().getTime() + duration * 1000;
 let times = setInterval(function () {
   let now = new Date().getTime();
   let distance = countDownDate - now;
+
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
   document.getElementById(
     "Timer"
   ).innerHTML = `<p>${minutes}</p><span>:</span><p>${seconds}</p>`;
+
   localStorage.removeItem("endedDate");
+
   if (distance < 0) {
     clearInterval(times);
     document.getElementById("Timer").innerHTML = `<p>EXPIRED</p>`;
@@ -166,6 +170,7 @@ let times = setInterval(function () {
   }
   dateIsEnded();
 }, 1000);
+
 // /* ---------------- when user click on input make raido work and store answers ---------------- */
 let finshExam = document.getElementById("finshExam");
 let studentAnswers = [];
@@ -181,7 +186,7 @@ function ClickOption() {
       studentAnswers[currentIndexFlag] = answerText;
       localStorage.setItem("studentResult", studentAnswers);
       res = localStorage.getItem("studentResult").split(",");
-      if (res.length !== 6) {
+      if (res.length !== currentExamQuestions.length) {
         finshExam.disabled = true;
       } else {
         finshExam.disabled = false;

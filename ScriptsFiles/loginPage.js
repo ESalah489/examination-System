@@ -69,16 +69,29 @@ function checkAllInputs() {
   } else {
     btnSubmit.removeAttribute("disabled");
     btnSubmit.style.backgroundColor = "#202d48";
-    btnSubmit.addEventListener("click", function (e) {
-      window.location.replace("../dashboardStudent.html");
-      emailValue.value = "";
-      passwordValue.value = "";
-    });
   }
 }
 btnSubmit.addEventListener("mouseover", function () {
   if (this.disabled === true) {
     this.style.cssText = "border:none;color:#fff;background-color:#202d4870;";
+  }
+});
+
+const errorMessageall = document.querySelectorAll("._error");
+btnSubmit.addEventListener("click", function (e) {
+  if (
+    emailValue.value === "" ||
+    passwordValue.value === "" ||
+    trueCheckBox === false
+  ) {
+    e.preventDefault();
+    errorMessageall.forEach((ele) => {
+      ele.style.display = "flex";
+    });
+  } else {
+    window.location.replace("http://127.0.0.1:5501/dashboardStudent.html");
+    emailValue.value = "";
+    passwordValue.value = "";
   }
 });
 

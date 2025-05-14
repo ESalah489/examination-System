@@ -99,20 +99,6 @@ function checkAllInputs() {
   } else {
     btnSubmit.removeAttribute("disabled");
     btnSubmit.style.backgroundColor = "#202d48";
-    btnSubmit.addEventListener("click", function (e) {
-      const userdata = {
-        userName: nameValue.value.trim(),
-        userEmail: emailValue.value.trim(),
-        userPassword: passwordValue.value.trim(),
-      };
-      usersData.push(JSON.stringify(userdata));
-      localStorage.setItem("userData", usersData);
-      window.location.replace("../loginPage.html");
-      nameValue.value = "";
-      emailValue.value = "";
-      passwordValue.value = "";
-      confiermPassValue.value = "";
-    });
   }
 }
 btnSubmit.addEventListener("mouseover", function () {
@@ -120,7 +106,33 @@ btnSubmit.addEventListener("mouseover", function () {
     this.style.cssText = "border:none;color:#fff;background-color:#202d4870;";
   }
 });
-
+const errorMessageall = document.querySelectorAll("._error");
+btnSubmit.addEventListener("click", function (e) {
+  if (
+    nameValue.value === "" ||
+    emailValue.value === "" ||
+    passwordValue.value === "" ||
+    confiermPassValue.value === ""
+  ) {
+    e.preventDefault();
+    errorMessageall.forEach((ele) => {
+      ele.style.display = "flex";
+    });
+  } else {
+    const userdata = {
+      userName: nameValue.value.trim(),
+      userEmail: emailValue.value.trim(),
+      userPassword: passwordValue.value.trim(),
+    };
+    usersData.push(JSON.stringify(userdata));
+    localStorage.setItem("userData", usersData);
+    window.location.replace("http://127.0.0.1:5501/loginPage.html");
+    nameValue.value = "";
+    emailValue.value = "";
+    passwordValue.value = "";
+    confiermPassValue.value = "";
+  }
+});
 /* --------------------------------- loader --------------------------------- */
 
 let loader = document.querySelector("._loader");
